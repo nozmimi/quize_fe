@@ -1,1 +1,17 @@
+
 <h3><%= link_to "＊過去問題を追加する", "/quizzes/new" %></h3>
+
+<hr>
+
+  問題：
+  <br>
+  <%= @quizzes.question %>
+  <br>
+  <br>
+  選択肢：
+  <br>
+  <%= @quizzes.selection %>
+  <br>
+  <hr>
+
+

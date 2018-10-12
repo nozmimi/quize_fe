@@ -3,24 +3,30 @@
 <h2>問題を追加する</h2>
 <br>
 
- <%= form_tag "/quizzes", method: :post do %>
- 	問題: 
- 	<br>
- 	<%= text_area_tag :question　, '',:size => "100x10" %>
- 	<br>
- 	<br>
- 	解答: 
- 	<br>
- 	<%= text_area_tag :selection　, '',:size => "100x6"  %>
- 	<br>
- 	<br>
- 	正解：
- 	<br>
- 	<%= text_area_tag :answer　, '',:size => "100x2" %>
- 	<br>
- 	<br>
-  <hr> 	
- 	<%= submit_tag "問題を追加する", :class => "btn btn-success" %>
+<div class="container">
+
+  <%= form_tag "/quizzes", method: :post do %>
+  
+    問題: 
+    <br>
+    <%= text_field_tag :question  %>
+    <br>
+    <br>
+
+   	解答: 
+   	<br>
+   	<%= text_field_tag :selection %>
+   	<br>
+   	<br>
+
+   	正解：
+   	<br>
+   	<%= text_field_tag :answer %>
+   	<br>
+   	<br>
+    <hr> 	
+   	<%= submit_tag "問題を追加する", :class => "btn btn-success" %>
     
   <% end %>
 <br>
+</div>
