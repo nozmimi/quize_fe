@@ -1,7 +1,7 @@
 class QuizzesController < ApplicationController
   
   def index
-    @quizzes = Quiz.order("RANDOM()").first
+    # @quizzes = Quiz.order("RANDOM()").first
   end
   
   def new
