@@ -1,9 +1,9 @@
-<%= link_to "ＴＯＰページへ戻る", "/quiz" %>
+<%= link_to "ＴＯＰページへ戻る", "/quizzes" %>
 <hr>
 <h2>問題を追加する</h2>
 <br>
 
- <%= form_tag "/quiz", method: :post do %>
+ <%= form_tag "/quizzes", method: :post do %>
  	問題: 
  	<br>
  	<%= text_area_tag :question　, '',:size => "100x10" %>
