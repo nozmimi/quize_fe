@@ -6,7 +6,7 @@
 
 <div class="container">
 
-  <%= form_tag "/quizzes", method: :post do %>
+  <%= form_tag "/quizzes/#{@quiz.id}", method: :put do %>
   
     問題: 
     <br>
@@ -29,7 +29,7 @@
    	<br>
    	<br>
     <hr> 	
-   	<%= submit_tag "問題を追加する", :class => "btn btn-success" %>
+   	<%= submit_tag "変更を保存する", :class => "btn btn-success" %>
     
   <% end %>
 <br>

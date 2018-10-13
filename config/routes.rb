@@ -6,5 +6,6 @@ Rails.application.routes.draw do
    post 'quizzes' => 'quizzes#create'   
    get 'quizzes/list_all' => 'quizzes#list_all'
    get 'quizzes/:id/edit' => 'quizzes#edit'
+   put 'quizzes/:id' => 'quizzes#update'
 
 end

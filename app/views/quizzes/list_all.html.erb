@@ -5,10 +5,17 @@
 
   <% @quizzes.each do |quiz| %>
     <%= quiz.id %>
+    問題：
     <br>
     <%= quiz.question %>
     <br>
+    <br>
+    選択肢：
+    <br>
     <%= quiz.selection %>
+    <br>
+    <br>
+    解答
     <br>
     <%= quiz.answer %>
     <br>

@@ -15,15 +15,21 @@ class QuizzesController < ApplicationController
   def create
     @quiz = Quiz.new(params_quiz)
     @quiz.save
-    redirect_to "/quizzes"
+    redirect_to "/quizzes/list_all"
   end
 
   def list_all
-    @quizzes = Quiz.all
+    @quizzes = Quiz.order('id')
   end
 
   def edit
     @quiz = Quiz.find(params[:id])
+  end
+
+  def update
+    @quiz = Quiz.find(params[:id])
+    @quiz.update_attributes(params_quiz)
+    redirect_to "/quizzes/list_all"
   end
 
   private
