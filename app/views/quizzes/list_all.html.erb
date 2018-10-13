@@ -1,0 +1,18 @@
+<%= link_to "ＴＯＰへ戻る",  {:controller => 'quizzes', :action => 'index'}, :class => 'btn btn-primary' %>
+
+
+<hr>
+
+  <% @quizzes.each do |quiz| %>
+    <%= quiz.id %>
+    <br>
+    <%= quiz.question %>
+    <br>
+    <%= quiz.selection %>
+    <br>
+    <%= quiz.answer %>
+    <br>
+    <%= link_to "編集する", "/quizzes/#{quiz.id}/edit",:class => 'btn btn-warning' %>
+    <hr>
+  <% end %>
+

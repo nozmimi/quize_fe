@@ -18,6 +18,13 @@ class QuizzesController < ApplicationController
     redirect_to "/quizzes"
   end
 
+  def list_all
+    @quizzes = Quiz.all
+  end
+
+  def edit
+    @quiz = Quiz.find(params[:id])
+  end
 
   private
   

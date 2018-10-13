@@ -1,5 +1,7 @@
 <%= link_to "問題を表示する",  {:controller => 'quizzes', :action => 'index'}, :class => 'btn btn-primary' %>
 <%= link_to "問題を追加する",  {:controller => 'quizzes', :action => 'new'}, :class => 'btn btn-success' %>
+<%= link_to "一覧表示",  {:controller => 'quizzes', :action => "list_all"}, :class => 'btn btn-secondary' %>
+
 
 <hr>
 
@@ -13,15 +15,26 @@
   <%= simple_format(@quizzes.selection) %>
   <br>
   <hr>
-  
 
-  <button type="button" class="btn btn-danger" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-      正解を表示する
-  </button>
-  
-  <div class="collapse" id="collapseExample">
-    <br>
-    <div class="border p-3">
-      <%= simple_format(@quizzes.answer) %>
+
+  <div class="accordion" id="accordionExample">
+    <div class="card">
+      
+      <div class="card-header" id="headingAnswer">
+        <h5 class="mb-0">
+          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseAnswer" aria-expanded="false" aria-controls="collapseAnswer">
+            正解を表示する
+          </button>
+        </h5>
+      </div>
+      
+      <div id="collapseAnswer" class="collapse" aria-labelledby="headingAnswer" data-parent="#accordionExample">
+        <div class="card-body">
+          <%= simple_format(@quizzes.answer) %>
+        </div>
+      </div>
+      
     </div>
   </div>
+
+<br>
