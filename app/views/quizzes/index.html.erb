@@ -7,19 +7,23 @@
 
   問題：
   <br>
-  <%= simple_format(@quizzes.question) %>
+  <%= simple_format(@quiz.question) %>
   <br>
   <br>
   選択肢：
   <br>
-  <%= simple_format(@quizzes.selection) %>
+    <ul class="list-group">
+      <li class="list-group-item"><%= simple_format(@quiz.selection) %></li>
+      <li class="list-group-item"><%= simple_format(@quiz.selection2) %></li>
+      <li class="list-group-item"><%= simple_format(@quiz.selection3) %></li>
+      <li class="list-group-item"><%= simple_format(@quiz.selection4) %></li>
+    </ul>  
   <br>
-  <hr>
-
 
   <div class="accordion" id="accordionExample">
     <div class="card">
-      
+    </div>
+    <div class="card">
       <div class="card-header" id="headingAnswer">
         <h5 class="mb-0">
           <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseAnswer" aria-expanded="false" aria-controls="collapseAnswer">
@@ -30,7 +34,7 @@
       
       <div id="collapseAnswer" class="collapse" aria-labelledby="headingAnswer" data-parent="#accordionExample">
         <div class="card-body">
-          <%= simple_format(@quizzes.answer) %>
+          <%= simple_format(@quiz.answer) %>
         </div>
       </div>
       

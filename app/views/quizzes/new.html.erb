@@ -10,7 +10,6 @@
   
     問題: 
     <br>
-    
     <div class="input-group">
     <%= text_area_tag :question, '', class: "form-control"  %>
     </div>
@@ -19,7 +18,14 @@
 
    	解答: 
    	<br>
-   	<%= text_area_tag :selection, "ア：\nイ：\nウ：\nエ：", class: "form-control" %>
+    <ul class="list-group">
+      <li class="list-group-item">
+        <%= text_area_tag :selection, 'ア：', class: "form-control" %>
+        <%= text_area_tag :selection2, 'イ：', class: "form-control" %>
+        <%= text_area_tag :selection3, 'ウ：', class: "form-control" %>
+        <%= text_area_tag :selection4, 'エ：', class: "form-control" %>
+      </li>
+    </ul>
    	<br>
    	<br>
 

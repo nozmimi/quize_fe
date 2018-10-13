@@ -2,9 +2,9 @@ class QuizzesController < ApplicationController
   
   def index
     begin
-      @quizzes = Quiz.order("RANDOM()").first
+      @quiz = Quiz.order("RANDOM()").first
     rescue
-      @quizzez = nil
+      @quiz = nil
     end
   end
   
@@ -41,7 +41,7 @@ class QuizzesController < ApplicationController
   private
   
   def params_quiz
-    params.permit(:question, :selection, :answer)
+    params.permit(:question, :selection, :selection2, :selection3, :selection4, :answer)
   end
 
 
