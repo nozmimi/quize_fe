@@ -1,7 +1,7 @@
 <%= link_to "一覧へ戻る",  {:controller => 'quizzes', :action => 'list_all'}, :class => 'btn btn-primary' %>
 
 <hr>
-<h2>問題を追加する</h2>
+<h2>内容を編集する</h2>
 <br>
 
 <div class="container">
@@ -27,9 +27,9 @@
    	<br>
    	<%= text_area_tag :answer, @quiz.answer, class: "form-control" %>
    	<br>
-   	<br>
     <hr> 	
-   	<%= submit_tag "変更を保存する", :class => "btn btn-success" %>
+   	<%= submit_tag "保存する", :class => "btn btn-success" %>
+   	<%= link_to "削除する", "/quizzes/#{@quiz.id}", method: :delete, :class => "btn btn-danger"%>
     
   <% end %>
 <br>
