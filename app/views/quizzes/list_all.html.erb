@@ -7,17 +7,17 @@
     <%= quiz.id %>
     問題：
     <br>
-    <%= quiz.question %>
+    <%= simple_format(quizzes.question) %>
     <br>
     <br>
     選択肢：
     <br>
-    <%= quiz.selection %>
+    <%= simple_format(quizzes.selection) %>
     <br>
     <br>
     解答
     <br>
-    <%= quiz.answer %>
+    <%= simple_format(quiz.answer) %>
     <br>
     <br>
     <%= link_to "編集する", "/quizzes/#{quiz.id}/edit",:class => 'btn btn-warning' %>
