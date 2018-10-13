@@ -12,6 +12,9 @@
     <br>
     <div class="input-group">
     <%= text_area_tag :question, @quiz.question, class: "form-control"  %>
+    <%= text_area_tag :question, , class: "form-control"  %>
+    <%= text_area_tag :question, , class: "form-control"  %>
+    <%= text_area_tag :question, , class: "form-control"  %>
     </div>
     <br>
     <br>
@@ -20,9 +23,6 @@
    	<br>
     <ul class="list-group">
       <li class="list-group-item"><%= text_area_tag :selection, @quiz.selection, class: "form-control" %></li>
-      <!--<li class="list-group-item"><%= text_area_tag :selection2, @quiz.selection2, class: "form-control" %></li>-->
-      <!--<li class="list-group-item"><%= text_area_tag :selection3, @quiz.selection3, class: "form-control" %></li>-->
-      <!--<li class="list-group-item"><%= text_area_tag :selection4, @quiz.selection4, class: "form-control" %></li>-->
     </ul>
 
    	正解：
