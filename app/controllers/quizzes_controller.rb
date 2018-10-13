@@ -15,7 +15,7 @@ class QuizzesController < ApplicationController
   def create
     @quiz = Quiz.new(params_quiz)
     @quiz.save
-    redirect_to "/quizzes/list_all"
+    redirect_to "/quizzes"
   end
 
   def list_all
