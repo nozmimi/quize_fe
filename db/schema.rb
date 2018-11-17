@@ -21,9 +21,9 @@ ActiveRecord::Schema.define(version: 2018_10_13_140857) do
     t.string "answer"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "selection2"
-    t.string "selection3"
-    t.string "selection4"
+    t.string "selection2", default: "0"
+    t.string "selection3", default: "0"
+    t.string "selection4", default: "0"
   end
 
 end
